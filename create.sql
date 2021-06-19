@@ -1,19 +1,13 @@
 create table publisher(
- id integer primary key autoincrement,
- name text NOT NULL,
- country text NOT NULL
+ id integer primary key,name text,country text
  );
 create table books(
- id integer primary key autoincrement,
- title text NOT NULL,
- publisher integer references publisher(id)
+id integer primary key,title text,publisher text,foreign key(publisher) references publisher(id)
  ); 
 create table subjects(
- id integer primary key autoincrement,
- name text NOT NULL
+ id integer primary key,name text
  );
 create table books_subjects(
- book integer references books(id),
- subject integer references subjects(id)
+ book text,subject text,foreign key (book) references books(id),foreign key (subject) references subjects(id)
  );
 
