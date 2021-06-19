@@ -12,7 +12,7 @@ create table subjects(
  id serial primary key autoincrement,
  name text NOT NULL
  );
-create table book_subjects(
+create table books_subjects(
  book serial references books(id),
  subject serial references subjects(id)
  );
