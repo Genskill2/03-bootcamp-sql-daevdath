@@ -13,7 +13,7 @@ create table subjects(
  name text NOT NULL
  );
 create table books_subjects(
- book serial references books(id),
- subject serial references subjects(id)
+ book integer references books(id),
+ subject integer references subjects(id)
  );
 
