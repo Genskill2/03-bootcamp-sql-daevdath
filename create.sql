@@ -6,7 +6,7 @@ create table publisher(
 create table books(
  id integer primary key autoincrement,
  title text NOT NULL,
- publisher text,foreign key(publisher) integer references publisher(id)
+ publisher text,foreign key(publisher)  references publisher(id)
  ); 
 create table subjects(
  id integer primary key autoincrement,
